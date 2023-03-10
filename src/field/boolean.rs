@@ -1,5 +1,4 @@
-use super::Field;
-
+#[derive(Debug)]
 pub struct Boolean(bool);
 
 impl Boolean {
@@ -7,5 +6,3 @@ impl Boolean {
         Boolean(default)
     }
 }
-
-impl Field for Boolean {}

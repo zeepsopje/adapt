@@ -1,5 +1,4 @@
-use super::Field;
-
+#[derive(Debug)]
 pub struct Text {
     pub value: String,
 }
@@ -11,5 +10,3 @@ impl Text {
         }
     }
 }
-
-impl Field for Text {}

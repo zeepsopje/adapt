@@ -1,20 +1,20 @@
-use crate::field::{Field, FieldType};
+use crate::field::FieldType;
 
 #[derive(Debug)]
-pub struct App<F: Field> {
+pub struct App {
     pub name: String,
-    pub fields: Vec<F>
+    pub fields: Vec<FieldType>,
 }
 
-impl<F: Field> App<F> {
-    pub fn new(name: &str) -> App<F> {
+impl App {
+    pub fn new(name: &str) -> App {
         App {
             name: name.to_string(),
             fields: Vec::new(),
         }
     }
 
-    pub fn add_field(&mut self, field: F) {
+    pub fn add_field(&mut self, field: FieldType) {
         self.fields.push(field);
     }
 }

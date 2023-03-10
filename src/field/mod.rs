@@ -1,14 +1,14 @@
 mod text;
 mod boolean;
+mod list;
 
 pub use text::Text;
 pub use boolean::Boolean;
+pub use list::List;
 
-pub trait Field {}
-
+#[derive(Debug)]
 pub enum FieldType {
     Text(Text),
-    Boolean(Boolean)
+    Boolean(Boolean),
+    List(List),
 }
-
-impl Field for FieldType {}
