@@ -17,7 +17,7 @@ fn main() {
     }
 
     let list = FieldType::List(List {
-        sub_fields: vec![
+        fields: vec![
             FieldType::List(List::new())
         ]
     });
